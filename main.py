@@ -23,25 +23,25 @@ users.insert({"name": "Ivan", "email": "ivan@gmail.com", "age": 20})
 print("-- получение всех записей --")
 users.get_all()
 for row in users.cursor.fetchall():
-    print(row)
+    print(*row)
 
 # получение данных по id
 print("-- получение записи по id --")
 users.get_id(1)
-print(users.cursor.fetchone())
+print(*users.cursor.fetchone())
 
 # обновление данных
 print("-- обновление --")
 users.update(1, {"name": "Lexa", "age": 26})
 users.get_id(1)
-print(users.cursor.fetchone())
+print(*users.cursor.fetchone())
 
 # удаление данных по id
 print("-- удаление по id --")
 users.delete_id(1)
 users.get_all()
 for row in users.cursor.fetchall():
-    print(row)
+    print(*row)
 
 # удаление таблицы
 users.delete_tab()

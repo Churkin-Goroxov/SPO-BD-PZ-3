@@ -171,11 +171,3 @@ class SQLTable:
         self.cursor.close()
         self.connection.close()
 
-
-db_config = {
-    "host": "srv221-h-st.jino.ru",
-    "user": "j30084097_137",
-    "password": "Gruppa137",
-    "database": "j30084097_137",
-    "use_pure": True
-}
